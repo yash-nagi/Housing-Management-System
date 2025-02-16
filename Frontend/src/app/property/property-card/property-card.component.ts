@@ -1,14 +1,13 @@
-import { Component } from "@angular/core";
+import { Component, Input, OnInit } from '@angular/core';
+import { NgFor } from '@angular/common';
 // comments.
 @Component({
     selector: 'app-property-card',
     templateUrl: 'property-card.component.html',
-    styleUrls: ['property-card.component.css']
+    styleUrls: ['property-card.component.css'],
+    imports: [NgFor
+    ]
 })
 export class PropertCardComponent{
-    property: any = {
-        "Name":"Birla House",
-        "Type":"House",
-        "Price":12000
-    }
+    @Input() Property : any
 }
